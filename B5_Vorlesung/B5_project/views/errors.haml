@@ -1,0 +1,4 @@
+-if @article.errors.any?
+ %ul#errors
+  -@article.errors.each do |error|
+   %li= error

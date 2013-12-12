@@ -1,0 +1,8 @@
+%label(for="name")Title:
+%input#name(type="text" name="article[title]"value="#{@article.title}")
+%label(for="description") Texte:
+%textarea#description(name="article[text]")
+  =@article.text
+
+%label(for="quantity") Author:
+%input#age(type="text" name="article[posted_by]"value="#{@article.posted_by}")

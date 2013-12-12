@@ -1,0 +1,20 @@
+= haml :errors, :layout => false
+%form(action="/articles" method="POST")
+ %fieldset
+  %legend Create a new article
+  %label(for="name")Title:
+  %br
+  %input#name(type="text" name="article[title]"value="#{@article.title}")
+  %br
+  %label(for="description") Texte:
+  %br
+  %textarea#description(name="article[text]" cols="40" rows="15")
+   =@article.text
+  %br
+  %label(for="quantity") Author:
+  
+  %br
+  %input#age(type="text" name="article[posted_by]"value="#{@article.posted_by}")
+  %br
+  %input(type="submit" value="Create") or <a href='/articles'>cancel</a>
+  

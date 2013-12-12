@@ -1,0 +1,8 @@
+%h3= @article.title
+%p Text: #{@article.text}
+%p Author: #{@article.posted_by}
+%p Created at: #{@article.created_at}
+%p Last updated at: #{@article.updated_at}
+%a(href="/articles/edit/#{@article.id}")EDIT
+%a(href="/articles/delete/#{@article.id}")DELETE
+%a(href='/articles') Back to index
