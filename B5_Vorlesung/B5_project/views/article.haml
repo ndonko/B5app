@@ -1,6 +1,14 @@
-
- 
- 
+%h3 Articles
+ %a(href="/articles/new")Create a new 
+- unless @articles.empty?
+ %ul#articles
+  - @articles.each do |article|
+   %li{:id => "article-#{article.id}"}
+    %a(href="/articles/#{article.id}")= article.title
+    %a(href="/articles/#{article.id}")= article.posted_by
+    %a(href="/articles/#{article.id}")= article.updated_at 
+ - else
+  %p No articles!
  
  
  
